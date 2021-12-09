@@ -1,9 +1,12 @@
 import { LightningElement } from 'lwc';
+import { peopleList } from '../card/people';
 
 export default class Splash extends LightningElement {
     disabled = false;
     buttonLabel = 'Join Game';
     buttonEle;
+
+    peopleList = peopleList;
 
     renderedCallback() {
         if (!this.buttonEle) {

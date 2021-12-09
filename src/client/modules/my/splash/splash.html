@@ -59,4 +59,16 @@
             wicked-coolkit</a
         >
     </div>
+
+    <div class="slds-m-bottom_x-large slds-p-around_x-large slds-scrollable_none">
+        <div class="slds-grid slds-gutters slds-scrollable card-list">
+            <template for:each={peopleList} for:item="person" for:index="index">
+                <div class="slds-col slds-size_1-of-5" key={person.name}>
+                    <my-card index={index}></my-card>
+                </div>
+            </template>
+        </div>
+    </div>
+    
+    
 </template>

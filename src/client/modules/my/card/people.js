@@ -3,7 +3,7 @@ export const peopleList = [
         name: 'Aviral Agrawal',
         designation: 'Salesforce Developer',
         headshot_url:
-            'https://static.wixstatic.com/media/49422d_4ecfc797ea3f487e9494084574e3c180~mv2.png/v1/crop/x_0,y_7,w_877,h_870/fill/w_496,h_496,al_c,q_85,usm_0.66_1.00_0.01/Salesforce%20MVP%20Aviral.webp',
+            '/resources/headshots/aviral.png',
         yrs: 4,
         certs: 13,
         badges: 425,
@@ -15,7 +15,7 @@ export const peopleList = [
         name: 'Meera R Nair',
         designation: 'Solution Architect',
         headshot_url:
-            'https://media-exp1.licdn.com/dms/image/C5603AQFN4Qf-KDor4A/profile-displayphoto-shrink_200_200/0/1616917463188?e=1644451200&v=beta&t=VPvuCrxDOezZoOR1NJLwrpUH6iUPUcAtf_JFDIkpH9o',
+            '/resources/headshots/meera.jpeg',
         yrs: 13,
         certs: 18,
         badges: 248,
@@ -27,7 +27,7 @@ export const peopleList = [
         name: 'Rakesh Gupta',
         designation: 'Senior Solution Architect',
         headshot_url:
-            'https://i0.wp.com/automationchampion.com/wp-content/uploads/2013/09/img_0042.jpg',
+            '/resources/headshots/rakesh.jpg',
         yrs: 10,
         certs: 20,
         badges: 356,
@@ -39,7 +39,7 @@ export const peopleList = [
         name: 'Amit Singh',
         designation: 'CEO & Founder',
         headshot_url:
-            'https://pbs.twimg.com/profile_images/1374272962551947265/6OyYbRHz_400x400.jpg',
+            '/resources/headshots/amit.jpg',
         yrs: 7,
         certs: 17,
         badges: 1105,
@@ -51,7 +51,7 @@ export const peopleList = [
         name: 'Abhinav Gupta',
         designation: 'CEO',
         headshot_url:
-            'https://pbs.twimg.com/profile_images/1209324325838286848/CEc4c-t5_400x400.jpg',
+            '/resources/headshots/abhinav.jpg',
         yrs: 13,
         certs: 5,
         badges: 102,
@@ -62,7 +62,7 @@ export const peopleList = [
     {
         name: 'Ankit Arora',
         designation: 'Director/Founder Briskminds',
-        headshot_url: 'trailblazer.me/id/ankit-arora',
+        headshot_url: '/resources/headshots/ankit.jpeg',
         yrs: 14,
         certs: 2,
         badges: 253,
@@ -74,7 +74,7 @@ export const peopleList = [
         name: 'Matt Lacey',
         designation: 'Head of Development',
         headshot_url:
-            'https://www.proximityinsight.com/wp-content/uploads/2020/05/person3.jpg',
+            '/resources/headshots/matt.jpg',
         yrs: 12,
         certs: 2,
         badges: 128,
@@ -86,7 +86,7 @@ export const peopleList = [
         name: 'Sakthivel Madesh',
         designation: 'Sr. Salesforce Developer',
         headshot_url:
-            'https://media-exp1.licdn.com/dms/image/C5603AQEbDPcSPRBheQ/profile-displayphoto-shrink_800_800/0/1632885898288?e=1644451200&v=beta&t=FG1plnlHWdhnC8qp_XQPVrPKHTvZzEDg-vyrampSAPk',
+            '/resources/headshots/sakthivel.jpeg',
         yrs: 11,
         certs: 18,
         badges: 873,
@@ -97,7 +97,7 @@ export const peopleList = [
     {
         name: 'Rupesh Bhatia',
         designation: 'Specialist Leader',
-        headshot_url: 'https://www.linkedin.com/in/rupesh-bhatia/',
+        headshot_url: '/resources/headshots/rupesh.jpeg',
         yrs: 11,
         certs: 17,
         badges: 152,
@@ -109,7 +109,7 @@ export const peopleList = [
         name: 'Narender Singh',
         designation: 'Salesforce Developer',
         headshot_url:
-            'https://www.dropbox.com/s/j7tzxihet8pyvrq/DP%20with%20MVP%20Logo.png?dl=0',
+            '/resources/headshots/narendar.png',
         yrs: 3,
         certs: 10,
         badges: 341,
@@ -121,7 +121,7 @@ export const peopleList = [
         name: 'Johan Yu',
         designation: 'Business System Architect',
         headshot_url:
-            'https://trailblazer-identity.my.salesforce.com/ncsphoto/7qGDgFdz6eXBvUgJiCq7eT2TdY4qNGfmgedwfzc81ITi8IRf7qOcx87XHkiWDuvIeAp20gQjKgDCOyTtq3Yt_g%3D%3D',
+            '/resources/headshots/johan.jpeg',
         yrs: 10,
         certs: 15,
         badges: 395,
@@ -132,7 +132,7 @@ export const peopleList = [
     {
         name: 'Amit Chaudhary',
         designation: 'Salesforce Technical Architect',
-        headshot_url: 'https://twitter.com/amit_sfdc/photo',
+        headshot_url: '/resources/headshots/amitc.jpg',
         yrs: 11,
         certs: 20,
         badges: 221,
@@ -143,7 +143,7 @@ export const peopleList = [
     {
         name: 'Chamil Madusanka',
         designation: 'Director - Sri Lanka of Dazeworks Technologies (pvt) Ltd',
-        headshot_url: 'https://tinyurl.com/ChamilHeadshot',
+        headshot_url: '/resources/headshots/chamil.jpeg',
         yrs: 10,
         certs: 4,
         badges: 112,
@@ -154,7 +154,7 @@ export const peopleList = [
     {
         name: 'Anna Loughnan',
         designation: 'Salesforce Product Lead',
-        headshot_url: 'https://www.linkedin.com/in/anna-loughnan-colquhoun',
+        headshot_url: '/resources/headshots/anna.png',
         yrs: 13,
         certs: 9,
         badges: 564,
@@ -165,7 +165,7 @@ export const peopleList = [
     {
         name: 'Jason Lawrence',
         designation: 'Managing Director',
-        headshot_url: 'https://photos.app.goo.gl/JBqiTe5zihmBBtCt5',
+        headshot_url: '/resources/headshots/jason.png',
         yrs: 14,
         certs: 17,
         badges: 194,
@@ -176,7 +176,7 @@ export const peopleList = [
     {
         name: 'Vamsi Krishna Gosu',
         designation: 'Salesforce Architect',
-        headshot_url: 'https://ibb.co/rKBbyBb',
+        headshot_url: '/resources/headshots/vamsi.jpg',
         yrs: 11,
         certs: 13,
         badges: 1026,
