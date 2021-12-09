@@ -1,0 +1,13 @@
+.cards-dealt {
+    zoom: 0.8;
+}
+
+.winner {
+    border: 8px solid #08a748;
+    padding: 10px;
+}
+
+.leaderboard {
+    width: 80%;
+    margin: 1.5rem auto;
+}

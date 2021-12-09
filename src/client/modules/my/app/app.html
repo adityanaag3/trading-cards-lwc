@@ -1,0 +1,14 @@
+<template>
+    <template if:true={isSplash}>
+        <my-splash onstagechange={handleStageChange}></my-splash>
+    </template>
+    <template if:true={isWaiting}>
+        <my-waiting
+            onstagechange={handleStageChange}
+            is-host={isHost}
+        ></my-waiting>
+    </template>
+    <template if:true={isGame}>
+        <my-game game-obj={gameObj} is-host={isHost}></my-game>
+    </template>
+</template>

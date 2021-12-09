@@ -1,0 +1,75 @@
+<template>
+    <template if:true={person}>
+        <div class="trading-card">
+            <div class="front">
+                <section class="dev-intro">
+                    <h1 class="dev-name">{person.name}</h1>
+                    <div class="dev-img">
+                        <img src={person.headshot_url} alt={person.name} />
+                    </div>
+                    <div class="contact-links">
+                        <p class="contact-designation">{person.designation}</p>
+                    </div>
+                </section>
+                <section class="dev-desc">
+                    <ul class="strengths">
+                        <li>
+                            <span>Years in SF Ecosystem</span>
+                            <template if:true={revealed}>
+                                <span>{person.yrs}</span>
+                            </template>
+                            <template if:false={revealed}>
+                                <span>?</span>
+                            </template>
+                        </li>
+                        <li>
+                            <span>Certifications</span>
+                            <template if:true={revealed}>
+                                <span>{person.certs}</span>
+                            </template>
+                            <template if:false={revealed}>
+                                <span>?</span>
+                            </template>
+                        </li>
+                        <li>
+                            <span>Trailhead Badges</span>
+                            <template if:true={revealed}>
+                                <span>{person.badges}</span>
+                            </template>
+                            <template if:false={revealed}>
+                                <span>?</span>
+                            </template>
+                        </li>
+                        <li>
+                            <span>Trailhead Points</span>
+                            <template if:true={revealed}>
+                                <span>{person.points}</span>
+                            </template>
+                            <template if:false={revealed}>
+                                <span>?</span>
+                            </template>
+                        </li>
+                        <li>
+                            <span>Trailhead Superbadges</span>
+                            <template if:true={revealed}>
+                                <span>{person.superbadges}</span>
+                            </template>
+                            <template if:false={revealed}>
+                                <span>?</span>
+                            </template>
+                        </li>
+                        <li>
+                            <span>Twitter Followers</span>
+                            <template if:true={revealed}>
+                                <span>{person.followers}</span>
+                            </template>
+                            <template if:false={revealed}>
+                                <span>?</span>
+                            </template>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </template>
+</template>

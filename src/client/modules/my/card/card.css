@@ -1,0 +1,372 @@
+/*----------------------------------------------
+  http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+------------------------------------------------*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*----------------------------------------------*/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Trading card
+------------------------*/
+
+.trading-card {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-gap: 1.6em;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    font-size: 100%;
+    font-family: 'Courier New', Courier, serif;
+    font-weight: bold;
+    color: #1e1e60;
+    justify-content: center;
+}
+
+.trading-card .front,
+.trading-card .back {
+    width: 100%;
+    max-width: 400px;
+    min-height: 500px;
+    padding: 0.7em;
+    border: 2px solid #1e1e60;
+    box-shadow: 0.4em 0.4em 0 #1e1e60;
+    justify-self: center;
+}
+
+/* Front
+------------------------*/
+
+.trading-card .front {
+    background-image: linear-gradient(45deg, #79589f, #009edb);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Intro section
+------------------------*/
+
+.dev-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.dev-intro > * {
+    position: relative;
+}
+
+.dev-name {
+    margin-left: -0.3em;
+    margin-right: -0.3em;
+    padding: 0.5em;
+    padding-bottom: 0.3em;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to left, transparent 0.7em, #1e1e60 0.7em),
+        linear-gradient(to bottom, transparent 0.7em, #1e1e60 0.7em),
+        linear-gradient(
+            225deg,
+            transparent 0.5em,
+            #1e1e60 0.5em,
+            #1e1e60 0.61em,
+            #f6f0e2 0.61em
+        );
+    background-size: 100% 2px, 2px 100%, 100% 100%;
+    background-position: 0 0, 100% 100%, 0 0;
+    border-left: 2px solid #1e1e60;
+    border-bottom: 2px solid #1e1e60;
+    z-index: 1;
+    font-size: 1.2rem;
+}
+
+/* Photo
+------------------------*/
+
+.dev-img {
+    height: 200px;
+    display: grid;
+    place-content: center;
+    position: relative;
+    background-image: linear-gradient(to right, #79589f, #009edb);
+    border: 2px solid #1e1e60;
+    border-top: none;
+    border-radius: 0 0 1.8em 1.8em;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.dev-img img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    filter: contrast(2) grayscale(100%);
+}
+
+/* Contact + social links
+------------------------*/
+
+.contact-links {
+    margin: -0.9em 0.5em -0.7em auto;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    display: flex;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+            to right,
+            transparent 0.7em,
+            #1e1e60 0.7em
+        ),
+        linear-gradient(to bottom, transparent 0.7em, #1e1e60 0.7em),
+        linear-gradient(
+            135deg,
+            transparent 0.5em,
+            #1e1e60 0.5em,
+            #1e1e60 0.61em,
+            #f6f0e2 0.61em
+        );
+    background-size: 100% 2px, 2px 100%, 100% 100%;
+    background-position: 100% 0, 0 100%, 0 0;
+    border-right: 2px solid #1e1e60;
+    border-bottom: 2px solid #1e1e60;
+    z-index: 1;
+    line-height: 30px;
+    height: 30px;
+}
+
+/* Description and feats
+   of strength section
+------------------------*/
+
+.dev-desc {
+    padding: 30px 20px 25px;
+    background-color: rgba(246, 240, 226, 0.7);
+    border: 2px solid #1e1e60;
+    border-radius: 25px;
+    flex-grow: 1;
+}
+
+.description {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f6f0e2;
+}
+
+ul.strengths {
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+    line-height: 30px;
+}
+
+ul.strengths li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ';
+}
+
+ul.strengths span:first-child {
+    padding-right: 0.33em;
+    background-image: linear-gradient(to right, #cdc7d3, #c7cdd7);
+}
+
+ul.strengths span + span {
+    float: right;
+    padding-left: 0.33em;
+    font-size: 20px;
+    background: #c7cdd7;
+}
+
+/* Back + stickers
+------------------------*/
+
+.back {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    background-color: #f6f0e2;
+}
+
+.sticker {
+    transition: transform 200ms ease-in-out;
+    width: 100px;
+}
+
+.sticker:first-child,
+.sticker:nth-child(8) {
+    transform: rotate(-5deg);
+}
+
+.sticker:nth-child(3) {
+    transform: rotate(5deg);
+}
+
+.sticker:nth-child(2),
+.sticker:nth-child(9) {
+    transform: rotate(8deg);
+}
+
+.sticker:nth-child(4),
+.sticker:nth-child(12) {
+    transform: rotate(12deg);
+}
+
+.sticker:nth-child(5) {
+    transform: rotate(-10deg);
+}
+
+.sticker:nth-child(7) {
+    transform: rotate(10deg);
+}
+
+.sticker:nth-child(11) {
+    transform: rotate(-13deg);
+}
+
+.sticker:hover {
+    transform: scale(1.1);
+}

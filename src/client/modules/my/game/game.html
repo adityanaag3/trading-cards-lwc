@@ -1,0 +1,143 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <template if:false={isHost}>
+            <div class="slds-col slds-size_1-of-4">
+                <div class="slds-p-around_medium">
+                    <div class="slds-text-align_center">
+                        <div
+                            class="slds-text-heading_medium slds-m-bottom_medium"
+                        >
+                            {player_name}, you have {numberOfCardsLeft} cards
+                            remaining
+                        </div>
+                        <div
+                            class="slds-text-heading_small slds-m-bottom_medium"
+                        >
+                            My Current Card
+                        </div>
+                    </div>
+                    <div class="slds-m-bottom_medium">
+                        <template if:true={cardsLeft}>
+                            <my-card
+                                index={myCurrentCard}
+                                revealed={myCurrentCardRevealed}
+                            ></my-card>
+                        </template>
+                        <template if:false={cardsLeft}>
+                            <div class="slds-text-align_center">
+                                You have no cards remaining
+                            </div>
+                        </template>
+                    </div>
+
+                    <div class="slds-m-bottom_medium">
+                        <div class="slds-form-element">
+                            <template if:true={myturn}>
+                                <label
+                                    class="slds-form-element__label"
+                                    for="select-01"
+                                    >Select Metric</label
+                                >
+                                <div class="slds-form-element__control">
+                                    <div class="slds-select_container">
+                                        <select
+                                            class="slds-select metric"
+                                            id="select-01"
+                                        >
+                                            <template
+                                                for:each={metricList}
+                                                for:item="metricItem"
+                                            >
+                                                <option
+                                                    value={metricItem.key}
+                                                    key={metricItem.key}
+                                                >
+                                                    {metricItem.value}
+                                                </option>
+                                            </template>
+                                        </select>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                        <template if:true={canplayerdeal}>
+                            <button
+                                class="slds-button slds-button_brand slds-m-top_small"
+                                onclick={dealCard}
+                                disabled={dealDisabled}
+                            >
+                                Deal
+                            </button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <div class={gameClass}>
+            <div class="slds-text-align_center slds-p-around_medium">
+                <template if:true={metric}>
+                    <div class="slds-text-heading_medium slds-m-bottom_medium">
+                        Most # of {detailedMetric}
+                    </div>
+                </template>
+                <template if:false={metric}>
+                    <div class="slds-text-heading_medium slds-m-bottom_medium">
+                        Waiting for a card to be dealt
+                    </div>
+                </template>
+            </div>
+
+            <div class={zoomClass}>
+                <template for:each={dealtCards} for:item="dealtcard">
+                    <div class={dealtcard.class} key={dealtcard.player_name}>
+                        <div
+                            class="slds-text-heading_medium slds-text-align_center"
+                        >
+                            {dealtcard.player_name}'s card
+                        </div>
+                        <my-card
+                            index={dealtcard.card}
+                            revealed={revealed}
+                        ></my-card>
+                    </div>
+                </template>
+            </div>
+
+            <template if:true={isHost}>
+                <div class="slds-text-align_center">
+                    <button
+                        class="slds-button slds-button_brand slds-m-top_small"
+                        onclick={reveal}
+                    >
+                        Reveal Metrics
+                    </button>
+                    <button
+                        class="slds-button slds-button_neutral slds-m-top_small"
+                        onclick={nextturn}
+                    >
+                        Next Turn
+                    </button>
+                </div>
+
+                <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-top_large leaderboard"
+                >
+                    <thead>
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Cards Left</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={allCards} for:item="allCard">
+                            <tr key={allCard.player_name}>
+                                <td>{allCard.player_name}</td>
+                                <td>{allCard.cardCount}</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+        </div>
+    </div>
+</template>
