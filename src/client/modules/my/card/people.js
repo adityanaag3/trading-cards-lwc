@@ -61,7 +61,7 @@ export const peopleList = [
     },
     {
         name: 'Ankit Arora',
-        designation: 'Director/Founder Briskminds',
+        designation: 'Director/Founder',
         headshot_url: '/resources/headshots/ankit.jpeg',
         yrs: 14,
         certs: 2,
@@ -142,7 +142,7 @@ export const peopleList = [
     },
     {
         name: 'Chamil Madusanka',
-        designation: 'Director - Sri Lanka of Dazeworks Technologies (pvt) Ltd',
+        designation: 'Director',
         headshot_url: '/resources/headshots/chamil.jpeg',
         yrs: 10,
         certs: 4,

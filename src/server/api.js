@@ -130,6 +130,10 @@ app.get('/api/nextturn', (req, res) => {
     res.json(players);
 });
 
+app.get('/api/getplayers', (req, res) => {
+    res.json(players);
+});
+
 app.listen(PORT, () =>
     console.log(
         `✅  API Server started: http://${HOST}:${PORT}/api/v1/endpoint`
