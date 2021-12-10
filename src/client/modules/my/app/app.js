@@ -26,4 +26,28 @@ export default class App extends LightningElement {
             this.isHost = true;
         }
     }
+
+    connectedCallback(){
+        let player_name = sessionStorage.getItem('player_name');
+        let sessionId = sessionStorage.getItem('session_id');
+        if(player_name || sessionId){
+            fetch('/api/getplayers')
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data) {
+                        this.gameObj = data;
+                        this.currentStage = 'GAME';
+                        if(sessionId){
+                            this.isHost = true;
+                        }
+                    }
+                }).catch(() => {
+                    // eslint-disable-next-line no-alert
+                    alert('Unable to start game');
+                });
+        }
+
+        
+
+    }
 }
