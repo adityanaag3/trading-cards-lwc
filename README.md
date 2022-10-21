@@ -4,7 +4,7 @@ Trading Cards is a multi-player game where each player gets a set of trading car
 
 ## How to play?
 
-1. Navigate to [this Heroku App](https://trading-cards-lwc.herokuapp.com/).
+1. Navigate to [this Heroku App](https://lwc-games.herokuapp.com/trading-cards).
 1. The host can click **Start a new game**. The host then has to share the game code with the participants
 1. The participants can join the game by entering their name, game code, and by clicking **Join game**.
 1. The first player whose turn it is to play, needs to select a metric and deals a card.
